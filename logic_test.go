@@ -35,7 +35,7 @@ func TestHighBitWhereLess(t *testing.T) {
 	run(0x01_02_03_04_05_06_07_08, Dupe(5), 0x80_80_80_80_00_00_00_00)
 }
 
-// TestHighBitWhereGreater verifies that the HighBitWhereGreater function correctly 
+// TestHighBitWhereGreater verifies that the HighBitWhereGreater function correctly
 // identifies bytes greater than a comparison value. This functionality is essential for
 // detecting outliers, anomalies, and values exceeding specified thresholds.
 func TestHighBitWhereGreater(t *testing.T) {

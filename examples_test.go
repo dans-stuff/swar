@@ -10,7 +10,7 @@ import (
 var lotsOfBytes = []byte("Allo Zorld! I am NOT yelling, but I am using SWAR!")
 
 // BenchmarkUsageCount compares the performance of counting spaces using traditional
-// byte-by-byte scanning versus SWAR-based parallel comparison. This benchmark 
+// byte-by-byte scanning versus SWAR-based parallel comparison. This benchmark
 // demonstrates how SIMD-within-a-register can accelerate simple character counting,
 // which is useful in text processing applications.
 func BenchmarkUsageCount(b *testing.B) {
@@ -52,9 +52,9 @@ func BenchmarkUsageCount(b *testing.B) {
 	})
 }
 
-// BenchmarkUsageVisitCaps compares traditional and SWAR approaches for finding and 
-// processing uppercase letters in text. This benchmark demonstrates how SWAR enables 
-// efficient filtering and position tracking in parallel, which is valuable for 
+// BenchmarkUsageVisitCaps compares traditional and SWAR approaches for finding and
+// processing uppercase letters in text. This benchmark demonstrates how SWAR enables
+// efficient filtering and position tracking in parallel, which is valuable for
 // text analysis and pattern matching applications.
 func BenchmarkUsageVisitCaps(b *testing.B) {
 	b.Run("BestNaive", func(b *testing.B) {
@@ -103,8 +103,8 @@ func BenchmarkUsageVisitCaps(b *testing.B) {
 	})
 }
 
-// BenchmarkUsageUppercase compares standard library and SWAR approaches to converting 
-// text to uppercase. This benchmark shows how SWAR enables high-performance text 
+// BenchmarkUsageUppercase compares standard library and SWAR approaches to converting
+// text to uppercase. This benchmark shows how SWAR enables high-performance text
 // transformation by applying character-level changes to multiple bytes in parallel,
 // which is important for text processing pipelines.
 func BenchmarkUsageUppercase(b *testing.B) {

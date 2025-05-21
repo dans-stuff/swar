@@ -5,7 +5,7 @@ import (
 )
 
 // TestSelectByLowBit verifies that values are correctly selected from a or b based on
-// the corresponding mask bit. This branchless selection is critical for data-dependent 
+// the corresponding mask bit. This branchless selection is critical for data-dependent
 // operations where conditional logic would otherwise harm performance.
 func TestSelectByLowBit(t *testing.T) {
 	run := func(a, b, mask, want uint64) {
@@ -17,7 +17,7 @@ func TestSelectByLowBit(t *testing.T) {
 	run(0x11_11_11_11, 0x22_22_22_22, 0x01_00_01_00, 0x11_22_11_22)
 }
 
-// TestMinBytes verifies that our parallel minimum function correctly selects the smaller 
+// TestMinBytes verifies that our parallel minimum function correctly selects the smaller
 // of two values for each byte position. This is essential for applications like image processing
 // where per-pixel minimum operations affect visual outcomes.
 func TestMinBytes(t *testing.T) {

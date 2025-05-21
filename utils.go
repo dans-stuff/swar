@@ -4,7 +4,7 @@ import "unsafe"
 
 const (
 	// LowBits has the lowest bit set in each byte for value duplication
-	LowBits  uint64 = 0x0101_0101_0101_0101
+	LowBits uint64 = 0x0101_0101_0101_0101
 	// packMask packs low bits from each byte into a single byte
 	packMask uint64 = 0x0102_0408_1020_4080
 )

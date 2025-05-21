@@ -4,8 +4,8 @@ import (
 	"testing"
 )
 
-// TestAverageBytes verifies that our parallel averaging algorithm correctly calculates 
-// the mean of corresponding bytes. This ensures proper data smoothing and interpolation 
+// TestAverageBytes verifies that our parallel averaging algorithm correctly calculates
+// the mean of corresponding bytes. This ensures proper data smoothing and interpolation
 // behavior when processing multiple values simultaneously.
 func TestAverageBytes(t *testing.T) {
 	run := func(a, b, want uint64) {
@@ -22,7 +22,7 @@ func TestAverageBytes(t *testing.T) {
 }
 
 // TestAddSatBytes verifies that our saturating addition correctly clamps results to 0xFF
-// when overflow occurs. This is crucial for applications like image processing and signal 
+// when overflow occurs. This is crucial for applications like image processing and signal
 // manipulation where preventing overflow is necessary for correct results.
 func TestAddSatBytes(t *testing.T) {
 	run := func(a, b, want uint64) {
@@ -36,7 +36,7 @@ func TestAddSatBytes(t *testing.T) {
 }
 
 // TestAddBytesWithWrapping ensures that our wrapping addition correctly handles overflow
-// by wrapping around to zero. This behavior is essential for certain algorithms like 
+// by wrapping around to zero. This behavior is essential for certain algorithms like
 // checksums and hash functions where wrap-around arithmetic is expected and required.
 func TestAddBytesWithWrapping(t *testing.T) {
 	run := func(a, b, want uint64) {

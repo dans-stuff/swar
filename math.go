@@ -2,9 +2,9 @@ package swar
 
 const (
 	// mEven selects even bytes in a uint64
-	mEven       uint64 = 0x00FF_00FF_00FF_00FF
+	mEven uint64 = 0x00FF_00FF_00FF_00FF
 	// mOdd selects odd bytes in a uint64
-	mOdd        uint64 = 0xFF00_FF00_FF00_FF00
+	mOdd uint64 = 0xFF00_FF00_FF00_FF00
 	// laneNotHigh masks all bits except the high bit in each byte
 	laneNotHigh uint64 = 0x7F7F_7F7F_7F7F_7F7F
 )
