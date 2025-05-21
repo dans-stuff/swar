@@ -1,13 +1,8 @@
-# `swar`: Faster byte processing
+![adc63e1f-a7e3-4272-b3d4-8e60f88c9b92](https://github.com/user-attachments/assets/3a6af901-d95e-46eb-9c1c-9d395fea8739)
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/dans-stuff/swar.svg)](https://pkg.go.dev/github.com/dans-stuff/swar)
-[![Go Report Card](https://goreportcard.com/badge/github.com/dans-stuff/swar)](https://goreportcard.com/report/github.com/dans-stuff/swar)
+# `swar`: Faster byte processing [![Go Reference](https://pkg.go.dev/badge/github.com/dans-stuff/swar.svg)](https://pkg.go.dev/github.com/dans-stuff/swar) [![Go Report Card](https://goreportcard.com/badge/github.com/dans-stuff/swar)](https://goreportcard.com/report/github.com/dans-stuff/swar)
 
-**Process 8 bytes in parallel using standard 64-bit registers. No assembly required.**
-
-SWAR (SIMD Within A Register) packs a virtual 8-lane data highway into a single CPU register, delivering SIMD-like performance with pure Go.
-
-## Why SWAR?
+**Process 8 bytes at a time using an old technique called Simd Within a Register.**
 
 - 🚀 **Up to 6x faster** than optimized byte-by-byte code
 - 🔌 **Zero dependencies** - no CGO or assembly required
