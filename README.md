@@ -9,8 +9,6 @@
 - 🧩 **Dead simple API** - works with your existing code
 - ⚡ **Fully portable** - runs anywhere Go runs
 
-
-
 ```go
 chunks, remainder := swar.BytesToLanes(text)
 for _, chunk := range chunks {
@@ -22,7 +20,7 @@ for _, chunk := range chunks {
 ## Installation
 
 ```bash
-go get github.com/dans-stuff/swar
+go get github.com/dans-stuff/swar@latest
 ```
 
 ## Core Operations
