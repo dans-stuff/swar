@@ -6,8 +6,13 @@ import (
 	"testing"
 )
 
+// Sample text for benchmark tests - contains spaces and mixed case for testing
 var lotsOfBytes = []byte("Allo Zorld! I am NOT yelling, but I am using SWAR!")
 
+// BenchmarkUsageCount compares the performance of counting spaces using traditional
+// byte-by-byte scanning versus SWAR-based parallel comparison. This benchmark 
+// demonstrates how SIMD-within-a-register can accelerate simple character counting,
+// which is useful in text processing applications.
 func BenchmarkUsageCount(b *testing.B) {
 	b.Run("BestNaive", func(b *testing.B) {
 		count := 0
@@ -47,6 +52,10 @@ func BenchmarkUsageCount(b *testing.B) {
 	})
 }
 
+// BenchmarkUsageVisitCaps compares traditional and SWAR approaches for finding and 
+// processing uppercase letters in text. This benchmark demonstrates how SWAR enables 
+// efficient filtering and position tracking in parallel, which is valuable for 
+// text analysis and pattern matching applications.
 func BenchmarkUsageVisitCaps(b *testing.B) {
 	b.Run("BestNaive", func(b *testing.B) {
 		sum := 0
@@ -94,6 +103,10 @@ func BenchmarkUsageVisitCaps(b *testing.B) {
 	})
 }
 
+// BenchmarkUsageUppercase compares standard library and SWAR approaches to converting 
+// text to uppercase. This benchmark shows how SWAR enables high-performance text 
+// transformation by applying character-level changes to multiple bytes in parallel,
+// which is important for text processing pipelines.
 func BenchmarkUsageUppercase(b *testing.B) {
 	b.Run("BestNaive", func(b *testing.B) {
 
@@ -136,6 +149,10 @@ func BenchmarkUsageUppercase(b *testing.B) {
 	})
 }
 
+// BenchmarkUsageAnomalies demonstrates using SWAR for anomaly detection in time series data.
+// This benchmark shows how SWAR enables efficient detection of unusual patterns or outliers
+// by processing multiple values simultaneously and using parallel threshold comparison,
+// which is critical for real-time monitoring and alerting systems.
 func BenchmarkUsageAnomalies(b *testing.B) {
 
 	b.Run("BestNaive", func(b *testing.B) {

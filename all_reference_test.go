@@ -5,6 +5,10 @@ import (
 	"testing"
 )
 
+// TestToBytes verifies that our endian-aware byte conversion works correctly.
+// This test ensures that bytes are extracted in the right order when converting
+// from a 64-bit integer to an 8-byte array, which is fundamental for the correctness
+// of all other operations that depend on byte manipulation.
 func TestToBytes(t *testing.T) {
 	in := uint64(0x000000bfe5bd580c)
 	expected := []byte{0x00, 0x00, 0x00, 0xbf, 0xe5, 0xbd, 0x58, 0x0c}
