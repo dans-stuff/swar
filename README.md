@@ -94,4 +94,4 @@ SWAR treats a 64-bit integer as 8 parallel lanes, using clever bit manipulation 
 
 ## License & Contributing
 
-MIT Licensed. [Contributions](CONTRIBUTING.md) welcome!
+MIT Licensed. [Contributions](https://github.com/dans-stuff/swar/fork) welcome!
